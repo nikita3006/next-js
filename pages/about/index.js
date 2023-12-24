@@ -10,6 +10,15 @@ function About (){
   return (
     <>
       <h1>Welcome to about page.</h1>
+      <ul>
+        {details.map((detail) => (
+          <li>
+            <Link href={`/about/${detail.id}`}>
+              {detail.name} 
+            </Link>
+          </li>
+        ))}
+      </ul>
     </>
   );
   }
